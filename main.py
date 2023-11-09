@@ -97,20 +97,38 @@
 # init field example
 from dataclasses import dataclass, field
 
-
 # A class for holding an employees content
-@dataclass
-class Xodim:
-    # Attributes Declaration
-    # using Type Hints
-    name: str
-    age: int
+# @dataclass
+# class Xodim:
+#     # Attributes Declaration
+#     # using Type Hints
+#     name: str
+#     age: int
+#
+#     # init field
+#     emp_id: str
+#     city: str = field(init=False, default="patna")
+#
+#
+# # object of dataclass
+# emp = Xodim("Hasan", "hasan858", 21)
+# print(emp)
 
-    # init field
-    emp_id: str
-    city: str = field(init=False, default="patna")
 
-
-# object of dataclass
-emp = Xodim("Hasan", "hasan858", 21)
-print(emp)
+# repr field
+# from dataclasses import dataclass, field
+#
+#
+# # A class for holding an employees content
+# @dataclass
+# class Xodim:
+#     # Attributes Declaration
+#     # using Type Hints
+#     name: str
+#     age: int
+#     emp_id: str
+#     city: str = field(init=False, default="patna", repr=True)
+#
+#
+# emp = Xodim("Jamshid", 21, "jama45"),
+# print(emp)
