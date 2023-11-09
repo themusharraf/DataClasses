@@ -153,20 +153,43 @@ from dataclasses import dataclass, field
 # print(hash(person1))
 # print(hash(person2))
 
-from dataclasses import dataclass
+# from dataclasses import dataclass
+#
+#
+# @dataclass
+# class Person:
+#     name: str
+#     age: int
+#
+#     def __hash__(self):
+#         return hash((self.name, self.age))
+#
+#
+# person1 = Person("Alisa", 30)
+# person2 = Person("Javohir", 30)
+#
+# print(hash(person1))
+# print(hash(person2))
 
 
-@dataclass
-class Person:
-    name: str
-    age: int
-
-    def __hash__(self):
-        return hash((self.name, self.age))
-
-
-person1 = Person("Alisa", 30)
-person2 = Person("Javohir", 30)
-
-print(hash(person1))
-print(hash(person2))
+# hash
+# from dataclasses import dataclass, field
+#
+#
+# # A class for holding an employees content
+# @dataclass(unsafe_hash=True)
+# class Xodim:
+#     # Attributes Declaration
+#     # using Type Hints
+#     name: str
+#     age: int
+#     emp_id: str
+#     city: str = field(init=False, default="patna",
+#                       repr=True, hash=False, compare=True)
+#
+#
+# emp1 = Xodim("Ali", "ali8", 24)
+# emp2 = Xodim("Husan", "husan14", 22)
+# print(emp1 == emp2)
+# output
+# false
