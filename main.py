@@ -66,29 +66,51 @@
 
 
 # default factory example
+# from dataclasses import dataclass, field
+#
+#
+# def get_emp_id():
+#     id = 2345
+#     return id
+#
+#
+# # A class for holding an employees content
+# @dataclass
+# class employee:
+#     # Attributes Declaration
+#     # using Type Hints
+#     name: str
+#     age: int
+#
+#     # default factory field
+#     emp_id: str = field(default_factory=get_emp_id)
+#     city: str = field(default="Tashkent")
+#
+#
+# # object of dataclass
+# emp = employee("Akbar", 21)
+# print(emp)
+# output
+# employee(name='Akbar', age=21, emp_id=2345, city='Tashkent')
+
+
+# init field example
 from dataclasses import dataclass, field
-
-
-def get_emp_id():
-    id = 2345
-    return id
 
 
 # A class for holding an employees content
 @dataclass
-class employee:
+class Xodim:
     # Attributes Declaration
     # using Type Hints
     name: str
     age: int
 
-    # default factory field
-    emp_id: str = field(default_factory=get_emp_id)
-    city: str = field(default="Tashkent")
+    # init field
+    emp_id: str
+    city: str = field(init=False, default="patna")
 
 
 # object of dataclass
-emp = employee("Akbar", 21)
+emp = Xodim("Hasan", "hasan858", 21)
 print(emp)
-# output
-# employee(name='Akbar', age=21, emp_id=2345, city='Tashkent')
