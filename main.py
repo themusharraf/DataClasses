@@ -97,7 +97,6 @@
 # init field example
 from dataclasses import dataclass, field
 
-
 # A class for holding an employees content
 # @dataclass
 # class Xodim:
@@ -134,22 +133,40 @@ from dataclasses import dataclass, field
 # emp = Xodim("Jamshid", 21, "jama45"),
 # print(emp)
 
+# class Person:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#
+#     def __hash__(self):
+#         return hash((self.name, self.age))
+#
+#     def __eq__(self, other):
+#         return isinstance(other, Person) and self.name == other.name and self.age == other.age
+#
+#
+# # Create instances of the Person class
+# person1 = Person("Alice", 30)
+# person2 = Person("Alice", 30)
+#
+# # Print custom hash codes
+# print(hash(person1))
+# print(hash(person2))
+
+from dataclasses import dataclass
+
+
+@dataclass
 class Person:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+    name: str
+    age: int
 
     def __hash__(self):
         return hash((self.name, self.age))
 
-    def __eq__(self, other):
-        return isinstance(other, Person) and self.name == other.name and self.age == other.age
 
+person1 = Person("Alisa", 30)
+person2 = Person("Javohir", 30)
 
-# Create instances of the Person class
-person1 = Person("Alice", 30)
-person2 = Person("Alice", 30)
-
-# Print custom hash codes
 print(hash(person1))
 print(hash(person2))
