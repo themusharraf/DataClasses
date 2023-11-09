@@ -23,27 +23,27 @@
 # # referring two object to check equality
 # print("emp1 va emp2 ma'lumotlari bir xilmi? ", emp1 == emp2)
 # print("emp1 va emp3 ma'lumotlari bir xilmi?", emp1 == emp3)
-
-from dataclasses import dataclass
-
-
+#
+# from dataclasses import dataclass
 #
 #
-# A class for holding an employees content
-@dataclass
-class employee:
-    # Attributes Declaration
-    # using Type Hints
-    name: str
-    emp_id: str
-    age: int
-    city: str
-
-
-# object of the class
-emp = employee("Musharraf", "allnc9", 23, 'Tashkent')
-
-print(emp.__dataclass_fields__)
+# #
+# #
+# # A class for holding an employees content
+# @dataclass
+# class employee:
+#     # Attributes Declaration
+#     # using Type Hints
+#     name: str
+#     emp_id: str
+#     age: int
+#     city: str
+#
+#
+# # object of the class
+# emp = employee("Musharraf", "allnc9", 23, 'Tashkent')
+#
+# print(emp.__dataclass_fields__)
 
 # default field example
 # from dataclasses import dataclass, field
@@ -63,3 +63,31 @@ print(emp.__dataclass_fields__)
 # print(emp)
 # # output
 # # employee(name='Dilshod', emp_id='dilshod001', age=21, city='Tashkent')
+
+
+# default factory example
+from dataclasses import dataclass, field
+
+
+def get_emp_id():
+    id = 2345
+    return id
+
+
+# A class for holding an employees content
+@dataclass
+class employee:
+    # Attributes Declaration
+    # using Type Hints
+    name: str
+    age: int
+
+    # default factory field
+    emp_id: str = field(default_factory=get_emp_id)
+    city: str = field(default="Tashkent")
+
+
+# object of dataclass
+emp = employee("Akbar", 21)
+print(emp)
+
