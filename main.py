@@ -90,4 +90,5 @@ class employee:
 # object of dataclass
 emp = employee("Akbar", 21)
 print(emp)
-
+# output
+# employee(name='Akbar', age=21, emp_id=2345, city='Tashkent')
