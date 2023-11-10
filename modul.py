@@ -8,10 +8,10 @@ User = {
 
 class Users:
     def __init__(self, name, username, password, email):
-        self.name = "Akbar"
-        self.username = "@akbar"
-        self.password = "all7889"
-        self.email = "all7889@gmail"
+        self.name = name
+        self.username = username
+        self.password = password
+        self.email = email
 
     def get_username(self):
         return self.username
@@ -21,3 +21,6 @@ class Users:
 
     def get_password(self):
         return self.password
+
+
+users = Users("Akbar", "@akbar", "@akbar3475", "akabar@gmail.com")

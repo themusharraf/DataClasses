@@ -1,8 +1,8 @@
-import modul as func
+from modul import User, users
 
-print(dir(func))
+print(User['username'])
+print(users.get_email())
 
 # output
-# ['User', 'Users', '__builtins__', '__cached__',
-# '__doc__', '__file__', '__loader__', '__name__',
-# '__package__', '__spec__']
+# @akbar
+# akabar@gmail.com
