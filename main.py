@@ -196,22 +196,40 @@ from dataclasses import dataclass, field
 
 # A basic Data Class
 # importing dataclass module
-from dataclasses import dataclass, field
+# from dataclasses import dataclass, field
+#
+#
+# # parent class
+# @dataclass
+# class Staff:
+#     name: str
+#     emp_id: str
+#     age: int
+#
+#
+# # child class
+# @dataclass
+# class employee(Staff):
+#     salary: int
+#
+#
+# emp = employee("Ulug'bek", "useryou44", 21, 60000)
+# print(emp)
 
 
-# parent class
-@dataclass
-class Staff:
-    name: str
-    emp_id: str
-    age: int
 
 
-# child class
-@dataclass
-class employee(Staff):
-    salary: int
 
 
-emp = employee("Ulug'bek", "useryou44", 21, 60000)
-print(emp)
+
+
+
+
+
+
+
+
+
+
+
+
