@@ -1,26 +1,15 @@
-User = {
-    "name": "Akbar",
-    "username": "@akbar",
-    "password": "@akbar09",
-    "email": "akbarb@gmail.com",
-}
+# math_operations.py
 
+def add(a, b):
+    return a + b
 
-class Users:
-    def __init__(self, name, username, password, email):
-        self.name = name
-        self.username = username
-        self.password = password
-        self.email = email
+def subtract(a, b):
+    return a - b
 
-    def get_username(self):
-        return self.username
+def multiply(a, b):
+    return a * b
 
-    def get_email(self):
-        return self.email
-
-    def get_password(self):
-        return self.password
-
-
-users = Users("Akbar", "@akbar", "@akbar3475", "akabar@gmail.com")
+def divide(a, b):
+    if b == 0:
+        raise ValueError("Cannot divide by zero")
+    return a / b
